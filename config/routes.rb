@@ -1,9 +1,27 @@
 Imijur::Application.routes.draw do
+
+  get "images" => "images#index"
+
+  post "images" => "images#create"
+  get "images/new" => "images#new"
+
+  get "images/destroy" => "images#destroy"
+
+  get "image/:id" => "images#show", as: "image"
+  patch "image/:id" => "images#update"
+
+  get "image/:id/edit" => "images#edit", as: "edit_image"
+  put "pictures/:id" => "pictures#update"
+  
+
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'images#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -12,7 +30,7 @@ Imijur::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #  resources :images  # I DONT GET IT
 
   # Example resource route with options:
   #   resources :products do

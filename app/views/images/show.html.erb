@@ -1,0 +1,17 @@
+<h1>Images#show</h1>
+<p>Find me in app/views/images/show.html.erb</p>
+
+<div class "show">
+	<p>
+		<img src = "<%= @image.URL %>">
+	</p>
+	<p>
+		<%= @image.title %>
+	</p>
+	<p>
+		<%= @image.author %>
+	</p>
+	<p>
+		<%=link_to "Edit", edit_image_url(@image) %>
+	</p>
+</div>

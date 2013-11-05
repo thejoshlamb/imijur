@@ -1,0 +1,12 @@
+<div class = 'header'>
+	<h1>imijur</h1>
+	<%= link_to "New", images_new_url %>
+</div>
+
+<div class = 'grid'>
+	<% @images.each do |image| %>
+		<%= link_to image_tag(image.URL), "/image/#{image.id}" %>
+		<!-- <img src='<%= image.URL %>' style = "width: 400px; height: 400px"> -->
+		</a>
+	<% end %>
+</div>
