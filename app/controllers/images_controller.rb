@@ -34,7 +34,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
 
     if @image.update_attributes(image_params)
-      redirect_to "/image/#{@image.id}"
+      redirect_to "/images/#{@image.id}"
     else
       render :edit
     end
@@ -42,6 +42,9 @@ class ImagesController < ApplicationController
 
 
   def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to root_url
   end
 
   def image_params

@@ -1,17 +1,6 @@
 Imijur::Application.routes.draw do
 
-  get "images" => "images#index"
-
-  post "images" => "images#create"
-  get "images/new" => "images#new"
-
-  get "images/destroy" => "images#destroy"
-
-  get "image/:id" => "images#show", as: "image"
-  patch "image/:id" => "images#update"
-
-  get "image/:id/edit" => "images#edit", as: "edit_image"
-  put "pictures/:id" => "pictures#update"
+  resources :images
   
 
 
