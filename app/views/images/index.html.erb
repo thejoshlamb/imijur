@@ -1,12 +1,14 @@
 <div class = 'header'>
-	<h1>imijur</h1>
-	<%= link_to "New", new_image_url %>
+	<h1><%= link_to "imijur", images_url %></h1>
 </div>
 
 <div class = 'grid'>
 	<% @images.each do |image| %>
-		<%= link_to image_tag(image.URL), "/images/#{image.id}" %>
-		<!-- <img src='<%= image.URL %>' style = "width: 400px; height: 400px"> -->
+		<div class = "imgbox"><%= link_to image_tag(image.URL), "/images/#{image.id}" %></div>
 		</a>
 	<% end %>
+</div>
+
+<div class = "new">
+	<%= render partial: "form" %>
 </div>

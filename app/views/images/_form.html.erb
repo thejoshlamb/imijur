@@ -1,18 +1,26 @@
+<%= form_for @image, :html => { :class => "form-vertical" }  do |i| %>
+<table>
+	<tr>
+		<td class = "table_col_one"><%= i.label :title %></td>
+		<td class = "table_col_two"><%= i.text_field :title %></td>
+	</tr> <!-- :title is an attribute of the database -->
+	<tr>
+		<td class = "table_col_one"><%= i.label :author %></td>
+		<td class = "table_col_two"><%= i.text_field :author %> </td>
+	</tr> 	<!-- rails autogenerates getters and setters in the model in order to access the attribute from the db -->
 
-<%= form_for @image do |i| %>
-<p>
-	<%= i.label :title %>
-	<%= i.text_field :title %>
+	<tr>
+		<td class = "table_col_one"><%= i.label :URL %></td>
+		<td class = "table_col_two"><%= i.text_field :URL %></td>
+	</tr> <!-- if these methods are specified in the model, however, we can override rails' automatic methods -->
+
+	<tr>
+		<td class = "table_col_one"><%= i.label :category %></td>
+		<td class = "table_col_two"><%= i.select :category, options_for_select([['one',1],['two',2]]) %></td>
+	</tr>
+	
+</table>
 </p>
-<p>
-	<%= i.label :author %>
-	<%= i.text_field :author %>
-</p>
-<p>
-	<%= i.label :URL %>
-	<%= i.text_field :URL %>
-</p>
-<p>
 	<%= i.submit "Save" %>
 </p>
 <% end %>

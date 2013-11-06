@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   def index #accesses all Image objects
     @images  = Image.all
+    @image = Image.new
   end
 
   def new #instantiates a new Image object and displays the new image page
@@ -48,7 +49,7 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-     params.require(:image).permit(:title, :author, :url)
+     params.require(:image).permit(:title, :author, :URL)
    end
 
 end
