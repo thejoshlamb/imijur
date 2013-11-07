@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
   def index #accesses all Image objects
     @images  = Image.all
     @image = Image.new
+    @most_recent_six = Image.most_recent_six
   end
 
   def new #instantiates a new Image object and displays the new image page

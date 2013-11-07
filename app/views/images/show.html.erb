@@ -1,7 +1,3 @@
-<div class = "header">
-	<h1><%= link_to "imijur", images_url %></h1>
-</div>
-
 <div class = "show">
 	<p>
 		<a href="<%= @image[:URL] %>"><img src = "<%= @image[:URL] %>"></a>
@@ -10,4 +6,5 @@
 
 <div class = "edit">
 	<%= render partial: "form" %>
+	<%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %>
 </div>

@@ -1,10 +1,9 @@
 class Image < ActiveRecord::Base
 
-	#	validates :title, presence :true
+	scope :newest_first, -> { order("created_at DESC") }
+  scope :most_recent_six, -> { newest_first.limit(6) }
 
-	# CATEGORIES = %w(Cats Kittens Dogs Puppies Bunnies)
-
-	 def category
-
-	 end
+  def self.created_before(time)
+  	where("created_at < ?", time)
+  end
 end

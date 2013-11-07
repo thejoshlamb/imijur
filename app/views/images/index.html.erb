@@ -1,11 +1,11 @@
-<div class = 'header'>
-	<h1><%= link_to "imijur", images_url %></h1>
+<div class = 'grid'>
+	<% @most_recent_six.each do |image| %>
+		<div class = "big_imgbox"><%= link_to image_tag(image.URL), "/images/#{image.id}" %></div>
+	<% end %>
 </div>
-
 <div class = 'grid'>
 	<% @images.each do |image| %>
 		<div class = "imgbox"><%= link_to image_tag(image.URL), "/images/#{image.id}" %></div>
-		</a>
 	<% end %>
 </div>
 
