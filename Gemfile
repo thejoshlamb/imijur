@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# For Azure
+gem 'capistrano', '~> 2.15'
+gem 'unicorn'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 

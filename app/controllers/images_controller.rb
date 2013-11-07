@@ -11,10 +11,6 @@ class ImagesController < ApplicationController
   def create # accepts params and saves to db
 
     @image = Image.new(image_params)
-    
-    @image.title = params[:image][:title]
-    @image.author = params[:image][:author]
-    @image.URL = params[:image][:URL]
 
     if @image.save
       redirect_to images_url
