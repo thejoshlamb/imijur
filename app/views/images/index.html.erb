@@ -12,3 +12,7 @@
 <div class = "new">
 	<%= render partial: "form" %>
 </div>
+
+<div id = "footer">
+	images over 1 month old: <%= Image.created_before(1.month.ago).count %>
+</div>

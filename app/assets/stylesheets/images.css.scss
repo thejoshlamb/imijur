@@ -22,12 +22,12 @@ input {
 	   background:none;
      border:none; 
     /*border is optional*/
-     color: Blue;
+     color: #007AFF;
      font-size: 17px
 }
 
 a {
-	color:blue;
+	color:#007AFF;
 }
 
 body {
@@ -67,20 +67,20 @@ form table, p{
 	left:0;
 	width: 100%;
 	text-align:center;
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid #FF3A2D;
 	display: inline;
 	z-index:2;
 }
 
 .header > a {
-	color: blue;
+	color: #34AADC;
 	display: inline;
 	float:right;
 	padding: 10px 10px 10px 10px ;
 }
 
 .header h1 {
-	color: blue;
+	color: #34AADC;
 	display: inline;
 	float:left;
 	margin: 0 0 0 0;
@@ -95,7 +95,7 @@ form table, p{
 	width: 24%;
 	margin: 0 5px 0 0;
 	text-align:center;
-	background: rgba(0,0,0,0.25);
+	background: #BDBEC2;
 	border-radius: 10px;
 }
 
@@ -145,4 +145,13 @@ form table, p{
 	max-width: 74%%;
 	margin:10px auto 50px auto ;
 	display:block;
+}
+
+#footer{
+	clear:both;
+	position:relative;
+	top:45px;
+	text-align:center;
+	width:100%;
+	background-color:#D1EEFC;
 }
